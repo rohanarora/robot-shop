@@ -25,10 +25,5 @@ spec:
         - containerPort: 5672
         - containerPort: 15672
         resources:
-          limits:
-            cpu: 200m
-            memory: 512Mi
-          requests:
-            cpu: 100m
-            memory: 256Mi
+          {{- .Values.rabbitmq.resources | toYaml | nindent 12 }}
       restartPolicy: Always

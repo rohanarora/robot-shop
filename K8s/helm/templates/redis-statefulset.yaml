@@ -28,12 +28,7 @@ spec:
           - name: data
             mountPath: /mnt/redis
         resources:
-          limits:
-            cpu: 200m
-            memory: 100Mi
-          requests:
-            cpu: 100m
-            memory: 50Mi
+          {{- .Values.redis.resources | toYaml | nindent 12 }}
       restartPolicy: Always
   volumeClaimTemplates:
     - metadata:

@@ -10,6 +10,13 @@ image:
 payment:
   gateway: null
   #gateway: https://www.worldpay.com
+  resources:
+    limits:
+      cpu: 200m
+      memory: 100Mi
+    requests:
+      cpu: 100m
+      memory: 50Mi
 
 # EUM configuration
 # Provide your key and set the endpoint
@@ -31,5 +38,111 @@ openshift: false
 # Storage class to use with redis statefulset.
 redis:
   storageClassName: standard
+  resources:
+    limits:
+      cpu: 200m
+      memory: 100Mi
+    requests:
+      cpu: 100m
+      memory: 50Mi
 
 ocCreateRoute: false
+
+cart:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 100Mi
+    requests:
+      cpu: 100m
+      memory: 50Mi
+
+catalogue:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 100Mi
+    requests:
+      cpu: 100m
+      memory: 50Mi
+
+dispatch:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 100Mi
+    requests:
+      cpu: 100m
+      memory: 50Mi
+
+mongodb:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 200Mi
+    requests:
+      cpu: 100m
+      memory: 100Mi
+
+mysql:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 1024Mi
+    requests:
+      cpu: 100m
+      memory: 700Mi
+
+payment:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 100Mi
+    requests:
+      cpu: 100m
+      memory: 50Mi
+
+rabbitmq:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 256Mi
+
+ratings:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 100Mi
+    requests:
+      cpu: 100m
+      memory: 50Mi
+
+shipping:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 500Mi
+
+user:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 100Mi
+    requests:
+      cpu: 100m
+      memory: 50Mi
+
+web:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 100Mi
+    requests:
+      cpu: 100m
+      memory: 50Mi

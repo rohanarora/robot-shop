@@ -28,10 +28,5 @@ spec:
         ports:
         - containerPort: 3306
         resources:
-          limits:
-            cpu: 200m
-            memory: 1024Mi
-          requests:
-            cpu: 100m
-            memory: 700Mi
+          {{- .Values.mysql.resources | toYaml | nindent 12 }}
       restartPolicy: Always

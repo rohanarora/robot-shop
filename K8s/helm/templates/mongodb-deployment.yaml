@@ -24,10 +24,5 @@ spec:
         ports:
         - containerPort: 27017
         resources:
-          limits:
-            cpu: 200m
-            memory: 200Mi
-          requests:
-            cpu: 100m
-            memory: 100Mi
+          {{- .Values.mongodb.resources | toYaml | nindent 12 }}
       restartPolicy: Always

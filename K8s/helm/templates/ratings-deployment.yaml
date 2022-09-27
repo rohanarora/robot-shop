@@ -24,12 +24,7 @@ spec:
         ports:
         - containerPort: 80
         resources:
-          limits:
-            cpu: 200m
-            memory: 100Mi
-          requests:
-            cpu: 100m
-            memory: 50Mi
+          {{- .Values.ratings.resources | toYaml | nindent 12 }}
         readinessProbe:
           httpGet:
             path: /_health
